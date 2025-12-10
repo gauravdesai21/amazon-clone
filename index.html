@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Home Clone</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <!-- TOP NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark amazon-top-nav">
+      <div class="container-fluid">
+
+        <!-- Left: logo + location -->
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand d-flex align-items-center me-3" href="#">
+            <span class="logo-text">amazon<span class="logo-dot">.in</span></span>
+          </a>
+
+          <div class="location-box d-none d-lg-block">
+            <span class="small text-light">Delivering to Mumbai 400001</span><br />
+            <span class="small text-white fw-bold">Update location</span>
+          </div>
+        </div>
+
+        <!-- Search -->
+        <form class="d-flex flex-grow-1 mx-3 search-form">
+          <div class="input-group">
+            <button class="btn search-category d-none d-md-block" type="button">
+              All
+            </button>
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Search Amazon.in"
+              aria-label="Search"
+            />
+            <button class="btn search-btn" type="submit">
+              🔍
+            </button>
+          </div>
+        </form>
+
+        <!-- Right side -->
+        <div class="d-flex align-items-center text-white gap-3">
+
+          <!-- Language -->
+          <div class="d-none d-md-flex align-items-center small">
+            <span class="me-1">🇮🇳</span> EN
+          </div>
+
+          <!-- Account -->
+          <div class="d-none d-md-block small">
+            <span>Hello, sign in</span><br />
+            <span class="fw-bold">Account &amp; Lists</span>
+          </div>
+
+          <!-- Orders -->
+          <div class="d-none d-md-block small">
+            <span>Returns</span><br />
+            <span class="fw-bold">&amp; Orders</span>
+          </div>
+
+          <!-- Cart -->
+          <div class="d-flex align-items-center small cart-box">
+            <span class="fs-4 me-1">🛒</span>
+            <span class="fw-bold">Cart</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECONDARY NAV -->
+    <nav class="navbar navbar-expand-lg amazon-second-nav">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#secondaryNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="secondaryNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 small">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">All</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Fresh</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MX Player</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Bestsellers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Mobiles</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Today&#39;s Deals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Customer Service</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Prime</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">New Releases</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Home &amp; Kitchen</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Computers</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-bg">
+
+    <!-- ===== HERO + FIRST 4 CARDS ===== -->
+    <section class="hero-wrapper">
+      <div class="hero-banner position-relative">
+
+        <div class="hero-slide active" id="hero-slide-1">
+          <div class="hero-content text-center">
+            <p class="hero-tagline mb-1">Starting ₹99</p>
+            <h2 class="hero-title mb-2">Budget store</h2>
+            <div class="hero-offer-box mx-auto">
+              <p class="mb-1 small fw-bold">Free delivery on first order</p>
+              <p class="mb-0 small">
+                + Extra bank offers on select cards
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- future slides बनवायचे असतील तर इथे आणखी divs add करू शकतोस -->
+
+        <!-- Hero arrows -->
+        <button class="hero-arrow hero-arrow-left">&lt;</button>
+        <button class="hero-arrow hero-arrow-right">&gt;</button>
+      </div>
+
+      <!-- bottom चार मोठे cards -->
+      <div class="container hero-cards-container">
+        <div class="row g-3">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card home-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Revamp your home in style</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Cushion covers &amp; more</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Figurines &amp; vases</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Storage</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Lighting</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card home-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Starting ₹49 | Home essentials</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Cleaning</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Bathroom</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Tools</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Wallpapers</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card home-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Bulk order discounts</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Laptops</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Kitchen</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Office</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">TVs</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">Shop now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card home-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Appliances for your home</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">ACs</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Fridges</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Microwaves</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="home-mini-img"></div>
+                    <p class="mini-caption">Washing machines</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See all offers</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECOND ROW : 4 SMALL CARDS ===== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Card repeat pattern -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card grid-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Starting ₹149 | Headphones</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">boAt</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Boult</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Noise</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Zebronics</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See all offers</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card grid-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Automotive essentials | Up to 60% off</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Cleaning</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Tyre care</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Helmets</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Vacuum</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card grid-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Starting ₹199 | Amazon brands</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Bedsheets</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Curtains</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Ironing</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Decor</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card grid-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Up to 50% off | Baby care &amp; toys</h5>
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Diapers</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Ride ons</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Toys</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid-mini-img"></div>
+                    <p class="mini-caption">Safety</p>
+                  </div>
+                </div>
+                <a href="#" class="see-more-link">See all offers</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HORIZONTAL SCROLLER 1 ===== -->
+    <section class="section-padding strip-bg">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-baseline mb-2">
+          <h5 class="mb-0">Up to 40% off | Smart storage, clutter-free living</h5>
+          <a href="#" class="small text-primary text-decoration-none">See all offers</a>
+        </div>
+
+        <div class="horizontal-slider">
+          <button class="hs-arrow hs-left">&lt;</button>
+          <div class="hs-items">
+            <!-- repeat item -->
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+          </div>
+          <button class="hs-arrow hs-right">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4 TALL CARDS ===== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card tall-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Best sellers in Clothing &amp; Accessories</h5>
+                <div class="tall-grid">
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card tall-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Up to 60% off | Trending products</h5>
+                <div class="tall-grid">
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card tall-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Best sellers in Beauty</h5>
+                <div class="tall-grid">
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card tall-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Home &amp; kitchen essentials</h5>
+                <div class="tall-grid">
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                  <div class="tall-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HORIZONTAL SCROLLER 2 ===== -->
+    <section class="section-padding strip-bg">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-baseline mb-2">
+          <h5 class="mb-0">Up to 80% off | Latest collections from Indian artisans</h5>
+          <a href="#" class="small text-primary text-decoration-none">See all offers</a>
+        </div>
+
+        <div class="horizontal-slider">
+          <button class="hs-arrow hs-left">&lt;</button>
+          <div class="hs-items">
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+            <div class="hs-item"></div>
+          </div>
+          <button class="hs-arrow hs-right">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SIGN IN STRIP ===== -->
+    <section class="section-padding bg-white">
+      <div class="container text-center sign-in-strip">
+        <p class="mb-1 fs-5">See personalized recommendations</p>
+        <button class="btn sign-in-btn px-5 py-1 mb-1">Sign in</button>
+        <p class="small mb-0">
+          New customer?
+          <a href="#" class="text-primary text-decoration-none">Start here.</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <!-- Back to top -->
+    <div class="back-to-top text-center">
+      Back to top
+    </div>
+
+    <!-- Main footer -->
+    <div class="footer-main">
+      <div class="container">
+        <div class="row text-light small py-4">
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="text-white">Get to Know Us</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">About Amazon</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press Releases</a></li>
+              <li><a href="#">Amazon Science</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="text-white">Connect with Us</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="text-white">Make Money with Us</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Sell on Amazon</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Advertise Your Products</a></li>
+              <li><a href="#">Amazon Pay on Merchants</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="text-white">Let Us Help You</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Your Account</a></li>
+              <li><a href="#">Returns Centre</a></li>
+              <li><a href="#">100% Purchase Protection</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-logo-row py-3 border-top border-secondary">
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <span class="logo-text">amazon</span>
+            <button class="btn btn-sm footer-btn">English</button>
+            <button class="btn btn-sm footer-btn">India</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom mini footer -->
+    <div class="footer-mini">
+      <div class="container small text-center text-light">
+        <div class="mb-1">
+          AbeBooks &nbsp; • &nbsp; Amazon Web Services &nbsp; • &nbsp; Audible &nbsp; • &nbsp; IMDb &nbsp; • &nbsp; Amazon Business &nbsp; • &nbsp; Prime Music
+        </div>
+        <div>
+          Conditions of Use &amp; Sale &nbsp; • &nbsp; Privacy Notice &nbsp; • &nbsp; Interest-Based Ads
+        </div>
+        <div class="mt-1">
+          © 1996-2025, Amazon-clone.com, or its affiliates
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
